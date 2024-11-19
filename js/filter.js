@@ -1,11 +1,11 @@
 const carContainer = document.getElementById("cars-container");
-const filterButton = document.getElementById("filter-apply");
 
+//Handles all of the generation and displaying of the cards
 function DisplayCars(cars) {
   carContainer.innerHTML = ""; //For clearing the carContainer
 
   for (let car of cars) {
-    // Partially from w3schools https://www.w3schools.com/howto/howto_css_product_card.asp
+    //Partially from w3schools https://www.w3schools.com/howto/howto_css_product_card.asp
     carContainer.innerHTML += `
     <div class="card">
         <p class="year">Year: ${car.year}</p>
@@ -31,7 +31,9 @@ function DisplayCars(cars) {
   }
 }
 
+//Handles the filtering based on user input
 function FilterCars(cars) {
+  //Gets the user's input
   const minYear = document.getElementById("min-car-year").value;
   const maxYear = document.getElementById("max-car-year").value;
   //Below array methods were partially learned and taken from https://www.w3schools.com/js/js_array_iteration.asp
@@ -67,6 +69,6 @@ function FilterCars(cars) {
 }
 
 DisplayCars(usedCars); //Displays on first page load
-filterButton.addEventListener("click", () => {
+document.getElementById("filter-apply").addEventListener("click", () => {
   DisplayCars(FilterCars(usedCars));
 });

@@ -156,4 +156,4 @@ const usedCars = [
   },
 ];
 
-// module.exports = usedCars;
+// module.exports = usedCars; // commented out because it caused an error in the chrome console, and the code works without it
