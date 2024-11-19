@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework 5</title>
+
+    <link rel="stylesheet" href="./css/sales-interface-style.css" />
+    <script src="./js/filter.js" defer></script>
+    <script src="./js/usedCars.js"></script>
+  </head>
+  <body>
+    <main>
+      <div id="filter-container">
+        <!-- <div class="filter"> -->
+        <div class="filter-year">
+          <h3>Year:</h3>
+
+          <label for="min-car-year">Min. Car Year:</label>
+          <input type="number" name="min-car-year" id="min-car-year" />
+          <br>
+          <label for="max-car-year">Max. Car Year:</label>
+          <input type="number" name="max-car-year" id="max-car-year" />
+        </div>
+
+        <div class="filter-make">
+          <h3>Make:</h3>
+
+          <div class="filter-checkbox-container">
+            <input
+              type="checkbox"
+              name="Toyota"
+              id="Toyota"
+              value="Toyota"
+              class="filter-make-checkbox"
+              checked
+            />
+            <label for="Toyota">Toyota</label>
+          </div>
+
+          <div class="filter-checkbox-container">
+            <input
+              type="checkbox"
+              name="Honda"
+              id="Honda"
+              value="Honda"
+              class="filter-make-checkbox"
+              checked
+            />
+            <label for="Honda">Honda</label>
+          </div>
+
+          <div class="filter-checkbox-container">
+            <input
+              type="checkbox"
+              name="Ford"
+              id="Ford"
+              value="Ford"
+              class="filter-make-checkbox"
+              checked
+            />
+            <label for="Ford">Ford</label>
+          </div>
+
+          <div class="filter-checkbox-container">
+            <input
+              type="checkbox"
+              name="Nissan"
+              id="Nissan"
+              value="Nissan"
+              class="filter-make-checkbox"
+              checked
+            />
+            <label for="Nissan">Nissan</label>
+          </div>
+
+          <div class="filter-checkbox-container">
+            <input
+              type="checkbox"
+              name="Chevrolet"
+              id="Chevrolet"
+              value="Chevrolet"
+              class="filter-make-checkbox"
+              checked
+            />
+            <label for="Chevrolet">Chevrolet</label>
+          </div>
+
+          <div class="filter-checkbox-container">
+            <input
+              type="checkbox"
+              name="Volkswagen"
+              id="Volkswagen"
+              value="Volkswagen"
+              class="filter-make-checkbox"
+              checked
+            />
+            <label for="Volkswagen">Volkswagen</label>
+          </div>
+
+          <div class="filter-checkbox-container">
+            <input
+              type="checkbox"
+              name="Hyundai"
+              id="Hyundai"
+              value="Hyundai"
+              class="filter-make-checkbox"
+              checked
+            />
+            <label for="Hyundai">Hyundai</label>
+          </div>
+
+          <div class="filter-checkbox-container">
+            <input
+              type="checkbox"
+              name="Subaru"
+              id="Subaru"
+              value="Subaru"
+              class="filter-make-checkbox"
+              checked
+            />
+            <label for="Subaru">Subaru</label>
+          </div>
+
+          <div class="filter-checkbox-container">
+            <input
+              type="checkbox"
+              name="Mazda"
+              id="Mazda"
+              value="Mazda"
+              class="filter-make-checkbox"
+              checked
+            />
+            <label for="Mazda">Mazda</label>
+          </div>
+
+          <div class="filter-checkbox-container">
+            <input
+              type="checkbox"
+              name="Kia"
+              id="Kia"
+              value="Kia"
+              class="filter-make-checkbox"
+              checked
+            />
+            <label for="Kia">Kia</label>
+          </div>
+
+          <div class="filter-checkbox-container">
+            <input
+              type="checkbox"
+              name="Dodge"
+              id="Dodge"
+              value="Dodge"
+              class="filter-make-checkbox"
+              checked
+            />
+            <label for="Dodge">Dodge</label>
+          </div>
+
+          <div class="filter-checkbox-container">
+            <input
+              type="checkbox"
+              name="Cadillac"
+              id="Cadillac"
+              value="Cadillac"
+              class="filter-make-checkbox"
+              checked
+            />
+            <label for="Cadillac">Cadillac</label>
+          </div>
+
+          <div class="filter-checkbox-container">
+            <input
+              type="checkbox"
+              name="Jaguar"
+              id="Jaguar"
+              value="Jaguar"
+              class="filter-make-checkbox"
+              checked
+            />
+            <label for="Jaguar">Jaguar</label>
+          </div>
+
+          <div class="filter-checkbox-container">
+            <input
+              type="checkbox"
+              name="Tesla"
+              id="Tesla"
+              value="Tesla"
+              class="filter-make-checkbox"
+              checked
+            />
+            <label for="Tesla">Tesla</label>
+          </div>
+
+          <div class="filter-checkbox-container">
+            <input
+              type="checkbox"
+              name="Porsche"
+              id="Porsche"
+              value="Porsche"
+              class="filter-make-checkbox"
+              checked
+            />
+            <label for="Porsche">Porsche</label>
+          </div>
+
+          <div class="filter-checkbox-container">
+            <input
+              type="checkbox"
+              name="Lexus"
+              id="Lexus"
+              value="Lexus"
+              class="filter-make-checkbox"
+              checked
+            />
+            <label for="Lexus">Lexus</label>
+          </div>
+
+          <div class="filter-checkbox-container">
+            <input
+              type="checkbox"
+              name="BMW"
+              id="BMW"
+              value="BMW"
+              class="filter-make-checkbox"
+              checked
+            />
+            <label for="BMW">BMW</label>
+          </div>
+        </div>
+
+        <div class="filter-mileage">
+          <h3>Mileage:</h3>
+          <label for="car-mileage">Car Mileage:</label>
+          <input type="number" name="car-mileage" id="car-mileage" />
+        </div>
+
+        <div class="filter-price">
+          <h3>Price:</h3>
+
+          <label for="min-car-price">Min. Car Price:</label>
+          <input type="number" name="min-car-price" id="min-car-price" />
+          <br>
+          <label for="max-car-price">Max. Car Price:</label>
+          <input type="number" name="max-car-price" id="max-car-price" />
+        </div>
+
+        <div class="filter-color">
+          <h3>Colors:</h3>
+
+          <div class="filter-checkbox-container">
+            <input
+              type="checkbox"
+              name="Silver"
+              id="Silver"
+              value="Silver"
+              class="filter-color-checkbox"
+              checked
+            />
+            <label for="Silver">Silver</label>
+          </div>
+
+          <div class="filter-checkbox-container">
+            <input
+              type="checkbox"
+              name="White"
+              id="White"
+              value="White"
+              class="filter-color-checkbox"
+              checked
+            />
+            <label for="White">White</label>
+          </div>
+
+          <div class="filter-checkbox-container">
+            <input
+              type="checkbox"
+              name="Black"
+              id="Black"
+              value="Black"
+              class="filter-color-checkbox"
+              checked
+            />
+            <label for="Black">Black</label>
+          </div>
+
+          <div class="filter-checkbox-container">
+            <input
+              type="checkbox"
+              name="Blue"
+              id="Blue"
+              value="Blue"
+              class="filter-color-checkbox"
+              checked
+            />
+            <label for="Blue">Blue</label>
+          </div>
+
+          <div class="filter-checkbox-container">
+            <input
+              type="checkbox"
+              name="Red"
+              id="Red"
+              value="Red"
+              class="filter-color-checkbox"
+              checked
+            />
+            <label for="Red">Red</label>
+          </div>
+
+          <div class="filter-checkbox-container">
+            <input
+              type="checkbox"
+              name="Gray"
+              id="Gray"
+              value="Gray"
+              class="filter-color-checkbox"
+              checked
+            />
+            <label for="Gray">Gray</label>
+          </div>
+
+          <div class="filter-checkbox-container">
+            <input
+              type="checkbox"
+              name="Green"
+              id="Green"
+              value="Green"
+              class="filter-color-checkbox"
+              checked
+            />
+            <label for="Green">Green</label>
+          </div>
+        </div>
+
+        <button type="submit" id="filter-apply">Apply</button>
+        <!-- </div> -->
+      </div>
+      <div id="cars-container"></div>
+    </main>
+
+    <!-- Partially from w3schools https://www.w3schools.com/howto/howto_css_product_card.asp -->
+    <!-- <div class="card">
+      <p class="year">Year: </p>
+      <p class="make">Make: </p>
+      <p class="model">Model: </p>
+      <p class="mileage">MIleage:  Miles</p>
+      <p class="price">Price: $</p>
+      <p class="color">Color: </p>
+      <p class="gasMileage">Gas Mileage: </p>
+      <p><button>Add to Cart</button></p>
+    </div> -->
+  </body>
+</html>
