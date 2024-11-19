@@ -49,7 +49,7 @@ function FilterCars(cars) {
     return checkbox.checked;
   });
 
-  const filteredCars = cars.filter((car) => {
+  return cars.filter((car) => {
     return (
       (car.year >= minYear || minYear == "") &&
       (car.year <= maxYear || maxYear == "") &&
@@ -64,7 +64,6 @@ function FilterCars(cars) {
       })
     );
   });
-  return filteredCars;
 }
 
 DisplayCars(usedCars); //Displays on first page load
